@@ -17,8 +17,8 @@ public class LinkedList {
 		}
 	}
 
-	public void insertLast(Node temp,int data) {
-		if(temp == null){
+	public void insertLast(Node temp, int data) {
+		if (temp == null) {
 			insertFirst(data);
 			return;
 		}
@@ -216,5 +216,63 @@ public class LinkedList {
 		System.out.println("---After reversal----");
 		ll.displayList();
 
+		System.out.println("-------");
+		LinkedList l2 = new LinkedList();
+		l2.insertFirst(0);
+		l2.insertFirst(1);
+		l2.insertFirst(2);
+		l2.insertFirst(3);
+		l2.insertFirst(4);
+		l2.insertFirst(5);
+
+		l2.displayList();
+
+		l2.first.next.next.next.next.next.next = l2.first.next;
+		System.out.println("pointing to node -> " + l2.first.next.data);
+		System.out.println(l2.isLoop(l2.first));	
+		System.out.println("After removing the loop now the linked list is -->");
+		l2.displayList();
+	}
+
+	// Find out if loop exist in LinkedList
+	public static boolean isLoop(Node node) {
+		Node slow = node;
+		Node fast = node;
+
+		while (slow != null && fast != null && fast.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+			if (slow == fast) {
+				System.out.println("Loop found in this node -->" + fast.data);
+				findLoopStart(slow, node);
+				removeLoop(node,fast);//In this method, 'node' nothing but starting from first/head node of LL i.e Node.first
+				return true;
+			}
+		}
+		return false;
+
+	}
+
+	// Find start node of the loop
+	public static void findLoopStart(Node temp, Node start) {
+
+		while (temp != null && start != null) {
+			temp = temp.next;
+			start = start.next;
+			if (temp == start) {
+				System.out.println("Start of loop : " + start.data);
+				break;
+			}
+		}
+	}
+
+	//Remove loop from linked list
+	public static void removeLoop(Node node, Node fast) {
+		while (node.next != fast.next) {
+			node = node.next;
+			fast = fast.next;
+		}
+		/* since fast->next is the looping point */
+		fast.next = null;
 	}
 }
