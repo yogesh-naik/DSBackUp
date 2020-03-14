@@ -10,6 +10,16 @@
  Time Complexity - O(n)
  
  
- 2)
+ 2)Alternate values in Queue Pair 
+ Solution -  Check the class - RearrangeQueue 
+ 
+ 3)Reverse the First K elements in Queue -
+ e.g input = 1,2,3,4,5,6,7,8,9  - K=5 first 5 no.
+ output =. 5,4,3,2,1,6,7,8,9
+ Solution -
+ 1)Put first 5 elements in Stack.
+ 2)Then put same 5 elements from stack to Queue again(back of the Queue).
+ 3)Then remove First (n-k) elements from start to Queue and add it the back of the Queue(i.e 6,7,8,9)
+ 
  
  
