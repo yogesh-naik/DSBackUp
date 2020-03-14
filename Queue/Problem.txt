@@ -1,0 +1,15 @@
+1)Implement Stack using 2 Queues Q1 & Q2-
+ Solution - 
+ Push operation -
+ If Q1 is empty then add the number in last of Q2.Otherwise vice versa.
+ Time complexity - O(1)
+ 
+ Pop operation --
+ If Q1 is NOT empty then transfer (n-1) elements to Q2 and return last element.
+ Otherwise Vice versa.
+ Time Complexity - O(n)
+ 
+ 
+ 2)
+ 
+ 
