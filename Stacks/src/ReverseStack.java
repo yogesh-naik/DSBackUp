@@ -2,7 +2,7 @@ import java.util.Stack;
 public class ReverseStack {
 
 	/*
-	 * Reverse the stack using anothe stack
+	 * Sort the stack in increasing order using another stack
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
