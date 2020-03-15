@@ -1,3 +1,5 @@
 1)Create Stack using 2 Queues - Push & pop operations
 
 2)Sort the stack in Ascesding or descending order.
+Answer - Increasing order - SortStack.java
+
