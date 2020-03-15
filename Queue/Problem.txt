@@ -23,7 +23,7 @@
  
  
  
-4)Reverse Stack using Recursion --
+4)Reverse Queue using Recursion --
 
            public static void reverseQ(Queue q1) {
              if (q1.isEmpty())
