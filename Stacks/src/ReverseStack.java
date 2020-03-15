@@ -1,5 +1,5 @@
 import java.util.Stack;
-public class ReverseStack {
+public class SortStack {
 
 	/*
 	 * Sort the stack in increasing order using another stack
