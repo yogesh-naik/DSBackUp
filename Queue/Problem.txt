@@ -23,3 +23,14 @@
  
  
  
+4)Reverse Stack using Recursion --
+
+           public static void reverseQ(Queue q1) {
+             if (q1.isEmpty())
+              return;
+             else {
+              int temp = q1.deleteFirst();
+              reverseQ(q1);
+              q1.addLast(temp);
+             }
+            }
