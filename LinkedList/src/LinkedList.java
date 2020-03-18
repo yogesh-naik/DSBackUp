@@ -275,4 +275,16 @@ public class LinkedList {
 		/* since fast->next is the looping point */
 		fast.next = null;
 	}
+	
+	//Print the Linked list in reverse order
+	//Recursive method
+	public static void recursionPrint(Node temp) {
+		if (temp.next == null) {
+			System.out.println(temp.data);
+			return;
+		} else {
+			recursionPrint(temp.next);
+			System.out.println(temp.data);
+		}
+	}
 }
