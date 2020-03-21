@@ -287,4 +287,25 @@ public class LinkedList {
 			System.out.println(temp.data);
 		}
 	}
+	//Reverse First K nodes 
+	//e.g K= 3.  
+	//input = > 1,2,3,4,5
+	//output => 3,2,1,4,5
+	public void ReverseKNodes(Node temp,int n){
+		int k = 1;
+		
+		Node t = temp;
+		Node temp1 = temp; Node temp2 = temp;
+		Node temp3 = temp.next;
+		
+		while(k<n){
+			temp2 = temp3;
+			temp3 = temp3.next;
+			temp2.next = temp1;
+			temp1 = temp2;
+			k++;			
+		}
+		t.next = temp3;
+		first = temp2;
+	}
 }
