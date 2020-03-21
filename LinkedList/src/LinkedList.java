@@ -308,4 +308,33 @@ public class LinkedList {
 		t.next = temp3;
 		first = temp2;
 	}
+	
+	/* Rotate the LinkedList by K nodes 
+	 * K= 3
+	 * input - 1,2,3,4,5
+	 * output - 3,4,5,1,2
+	 */
+	public void RotateKNodes(Node temp, int n) {
+		int k = 1;
+
+		Node t = temp;
+
+		while (k < n) {
+			t = t.next;
+			k++;
+		}
+		if (t == null) {
+			System.out.println("K is greater than legnth of LinkedList");
+			return;
+		}
+
+		Node KNode = t;
+		while(t.next !=null){
+			t = t.next;
+		}
+		
+		t.next = first;
+		first = KNode.next;
+		KNode.next = null;
+	}
 }
