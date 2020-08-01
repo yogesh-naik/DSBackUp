@@ -1,0 +1,15 @@
+   Question - Merge 2 linked list into 1 list using extra memory of new LL
+   
+   /////////////////// My Logic of merge list  ////////////      
+        while(temp1 !=null && temp2 !=null){
+			if(temp1.data <= temp2.data){
+				Node temp3 = temp1.next;
+				temp1.next = temp2;
+				temp1 = temp3;
+			}else{
+				Node temp3 = temp2.next;
+				temp2.next = temp1;
+				temp2 = temp3;
+			}
+		}
+        ///////////////////end of  merge list  ////////////
