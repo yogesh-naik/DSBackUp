@@ -7,4 +7,20 @@ Linked List--
 1)Reverse linked list (with 3 pointers)
 2)Reverse last K nodes (using 4 pointers)
 3)Merge 2 Linked list into 1 Linked list.
-answer - 
+answer - with recursion.
+	public static Node SortedMerge(Node A, Node B) {
+
+		if (A == null)
+			return B;
+		if (B == null)
+			return A;
+
+		if (A.data < B.data) {
+			A.next = SortedMerge(A.next, B);
+			return A;
+		} else {
+			B.next = SortedMerge(A, B.next);
+			return B;
+		}
+
+	}
