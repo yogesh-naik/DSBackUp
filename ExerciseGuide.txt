@@ -11,6 +11,18 @@ Swap method --
 			no = temp;
 		}
 	}
+	
+Rotate array element by 1 clockwise
+int arr[] = { 1, 2, 3, 4, 5};
+output = {5, 1, 2, 3, 4}
+//Rotate by one
+	static void ClockRotate(int a[]) {
+		int temp = a[a.length-1];
+		for (int i = a.length - 2; i >= 0; i--) {
+			a[i + 1] = a[i];
+		}
+		a[0] = temp;
+	}
 -------------------------------------------------------
 Linked List--
 1)Reverse linked list (with 3 pointers)
