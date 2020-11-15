@@ -45,3 +45,30 @@ answer - with recursion.
 		}
 
 	}
+	
+--------------------------------------------------
+//Objective- Print the hashtable after sorting the Values(not sorted Keys)
+Hashtable<String, Integer> people = new Hashtable<String, Integer>();
+people.put("John", 0);
+people.put("Angie", 31);
+people.put("Steve", 5);
+
+//Sort the values in ascending order
+List<Integer> al = new ArrayList<Integer>(people.values());
+Collections.sort(al);
+System.out.println(al);
+
+System.out.println("-------------");
+
+//Get all Entries from Ha
+Set Entry = people.entrySet();
+
+//Print the Hashtable based on sorted Values.
+int i = 0;
+for (Integer a : al)
+for (Map.Entry entry : people.entrySet()) {
+	if (a.equals(entry.getValue())) {
+		String strKey = (String) entry.getKey();
+		System.out.println(a + "--" + strKey);
+	}
+}
