@@ -23,6 +23,19 @@ output = {5, 1, 2, 3, 4}
 		}
 		a[0] = temp;
 	}
+	
+
+Reverse the partial array -
+int a[] = {1,2,3,4,5};
+o/pt = 1 2 5 4 3
+
+for(i=0;i<a.length/2-1;i++){  // Key element  i<a.length/2-1
+	int temp = a[i+2];
+	a[i+2] = a[a.length-1-i];
+	a[a.length-1-i] = temp;
+}
+		
+
 -------------------------------------------------------
 Linked List--
 1)Reverse linked list (with 3 pointers)
