@@ -1,4 +1,6 @@
 
+#LinkedHashSet and LinkedHashMap for keeping order(Normal Hashmap , HashTable and HashSet does not keep the order)
+----------------------------------------------------------------
 Array
 1Merge 2 sorted array into 1 array.(Merge2SortArrayinto1.java)
 First array is bigger and has sufficient space to accomode first.
@@ -85,3 +87,4 @@ for (Map.Entry entry : people.entrySet()) {
 		System.out.println(a + "--" + strKey);
 	}
 }
+--------------------------------------
