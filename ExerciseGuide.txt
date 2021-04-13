@@ -99,3 +99,11 @@ for (Map.Entry entry : people.entrySet()) {
 	}
 }
 --------------------------------------
+Given an array of pairs, find all symmetric pairs in it
+e.g -
+Input: arr[] = {{11, 20}, {30, 40}, {5, 10}, {40, 30}, {10, 5}}
+Output: Following pairs have symmetric pairs
+        (30, 40)
+        (5, 10)  
+solution -- Using HashMap
+https://www.geeksforgeeks.org/given-an-array-of-pairs-find-all-symmetric-pairs-in-it/
