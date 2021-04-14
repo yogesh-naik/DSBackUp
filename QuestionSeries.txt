@@ -3,3 +3,8 @@ https://www.geeksforgeeks.org/top-20-hashing-technique-based-interview-questions
 
 Arrays Questions-
 https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/
+
+Longest Substring Without Repeating Characters
+Input: s = "abcabcbb"
+Output: 3 
+
