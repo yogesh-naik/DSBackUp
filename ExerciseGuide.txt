@@ -107,3 +107,28 @@ Output: Following pairs have symmetric pairs
         (5, 10)  
 solution -- Using HashMap
 https://www.geeksforgeeks.org/given-an-array-of-pairs-find-all-symmetric-pairs-in-it/
+--------------------------------
+Revere String without StringBuffer or any library methods 
+public static void reverseString(String str) {
+		Stack<String> st = new Stack(); //Using stack
+		int start = 0, end = 0;
+		for (int i = 0; i <= str.length() - 1; i++) {
+			if (str.charAt(i) != ' ') {
+				end++;
+			} else {
+				String temp = str.substring(start, end);
+				st.push(temp);
+				start = i + 1;
+				end = i + 1;
+			}
+			if (i == str.length() - 1) {
+				String temp = str.substring(start, end);
+				st.push(temp);
+			}
+		}
+
+		for (int i = st.size() - 1; i >= 0; i--) {
+			System.out.print(st.get(i) + " ");
+		}
+		System.out.println(st);
+	}
